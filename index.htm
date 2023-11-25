@@ -1,97 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>فرم ورود کاربر</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h2>فرم ورود کاربر</h2>
-    
-        <form>
-            <div>
-                <label for="inputFullName">نام و نام خانوادگی:</label>
-                <input type="text" id="inputFullName" name="inputFullName" required />
-            </div>
-    
-            <div>
-                <label for="inputPhoneNumber">شماره تلفن:</label>
-                <input type="tel" id="inputPhoneNumber" name="inputPhoneNumber" pattern="[0-9]{11}" placeholder="لطفاً یازده رقم عددی وارد کنید" required dir="rtl" />
-            </div>
-    
-            <div>
-                <label for="inputEmail">ایمیل:</label>
-                <input type="email" id="inputEmail" name="inputEmail" placeholder="example@gmail.com" required />
-            </div>
-    
-            <div>
-                <label for="selectGender">تعیین جنسیت:</label>
-                <div class="input-group">
-                    <input type="text" id="genderDisplay" placeholder="جنسیت" aria-label="جنسیت" readonly />
-                    <button type="button" onclick="setGender('مرد')">مرد</button>
-                    <button type="button" onclick="setGender('زن')">زن</button>
-                </div>
-                <input type="hidden" id="genderInput" name="genderInput" />
-            </div>
-    
-            <div>
-                <label for="selectProvince">انتخاب استان:</label>
-                <select id="selectProvince" name="selectProvince">
-                    <option value="کرمان">کرمان</option>
-                    <option value="البرز">البرز</option>
-                    <option value="اردبیل">اردبیل</option>
-                    <option value="آذربایجان شرقی">آذربایجان شرقی</option>
-                    <option value="آذربایجان غربی">آذربایجان غربی</option>
-                    <option value="بوشهر">بوشهر</option>
-                    <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
-                    <option value="فارس">فارس</option>
-                    <option value="قزوین">قزوین</option>
-                    <option value="قم">قم</option>
-                    <option value="گیلان">گیلان</option>
-                    <option value="گلستان">گلستان</option>
-                    <option value="همدان">همدان</option>
-                    <option value="هرمزگان">هرمزگان</option>
-                    <option value="ایلام">ایلام</option>
-                    <option value="اصفهان">اصفهان</option>
-        
-                    <option value="کرمانشاه">کرمانشاه</option>
-                    <option value="خوزستان">خوزستان</option>
-                    <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
-                    <option value="کردستان">کردستان</option>
-                    <option value="لرستان">لرستان</option>
-                    <option value="مرکزی">مرکزی</option>
-                    <option value="مازندران">مازندران</option>
-                    <option value="خراسان شمالی">خراسان شمالی</option>
-                    <option value="خراسان رضوی">خراسان رضوی</option>
-                    <option value="خراسان جنوبی">خراسان جنوبی</option>
-                    <option value="سمنان">سمنان</option>
-                    <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
-                    <option value="تهران">تهران</option>
-                    <option value="یزد">یزد</option>
-                    <option value="زنجان">زنجان</option>
-                </select>
-            </div>
-    
-            <div>
-                <label for="selectEducationLevel">مقطع تحصیلی:</label>
-                <select id="selectEducationLevel" name="selectEducationLevel">
-                    <option value="دیپلم">دیپلم</option>
-                    <option value="کاردانی ">کاردانی</option>
-                    <option value="کارشناسی">کارشناسی</option>
-                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>
-                    <option value="دکترا">دکترا</option>
-                </select>
-            </div>
-          
-            <button type="button" onclick="generatePDF()">ارسال فرم</button>
-        </form>
+      <h2>فرم ورود کاربر</h2>
+
+      <form>
+        <div>
+          <label for="inputFullName">نام و نام خانوادگی:</label>
+          <input type="text" id="inputFullName" name="inputFullName" required />
+        </div>
+
+        <div>
+          <label for="inputPhoneNumber">شماره تلفن:</label>
+          <input
+            type="tel"
+            id="inputPhoneNumber"
+            name="inputPhoneNumber"
+            pattern="[0-9]{11}"
+            placeholder="لطفاً یازده رقم عددی وارد کنید"
+            required
+            dir="rtl"
+          />
+        </div>
+
+        <div>
+          <label for="inputEmail">ایمیل:</label>
+          <input
+            type="email"
+            id="inputEmail"
+            name="inputEmail"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="selectGender">تعیین جنسیت:</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="genderDisplay"
+              placeholder="جنسیت"
+              aria-label="جنسیت"
+              readonly
+            />
+            <button type="button" onclick="setGender('مرد')">مرد</button>
+            <button type="button" onclick="setGender('زن')">زن</button>
+          </div>
+          <input type="hidden" id="genderInput" name="genderInput" />
+        </div>
+
+        <div>
+          <label for="selectProvince">انتخاب استان:</label>
+          <select id="selectProvince" name="selectProvince">
+            <option value="کرمان">کرمان</option>
+            <option value="البرز">البرز</option>
+            <option value="اردبیل">اردبیل</option>
+            <option value="آذربایجان شرقی">آذربایجان شرقی</option>
+            <option value="آذربایجان غربی">آذربایجان غربی</option>
+            <option value="بوشهر">بوشهر</option>
+            <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
+            <option value="فارس">فارس</option>
+            <option value="قزوین">قزوین</option>
+            <option value="قم">قم</option>
+            <option value="گیلان">گیلان</option>
+            <option value="گلستان">گلستان</option>
+            <option value="همدان">همدان</option>
+            <option value="هرمزگان">هرمزگان</option>
+            <option value="ایلام">ایلام</option>
+            <option value="اصفهان">اصفهان</option>
+
+            <option value="کرمانشاه">کرمانشاه</option>
+            <option value="خوزستان">خوزستان</option>
+            <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
+            <option value="کردستان">کردستان</option>
+            <option value="لرستان">لرستان</option>
+            <option value="مرکزی">مرکزی</option>
+            <option value="مازندران">مازندران</option>
+            <option value="خراسان شمالی">خراسان شمالی</option>
+            <option value="خراسان رضوی">خراسان رضوی</option>
+            <option value="خراسان جنوبی">خراسان جنوبی</option>
+            <option value="سمنان">سمنان</option>
+            <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
+            <option value="تهران">تهران</option>
+            <option value="یزد">یزد</option>
+            <option value="زنجان">زنجان</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="selectEducationLevel">مقطع تحصیلی:</label>
+          <select id="selectEducationLevel" name="selectEducationLevel">
+            <option value="دیپلم">دیپلم</option>
+            <option value="کاردانی ">کاردانی</option>
+            <option value="کارشناسی">کارشناسی</option>
+            <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+            <option value="دکترا">دکترا</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="generatePDF()">ارسال فرم</button>
+      </form>
     </div>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.6/jspdf.plugin.autotable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
-</body>
+  </body>
 </html>
